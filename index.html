@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Fylo landing page with two column layout</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      main {
+        box-sizing: border-box;
+        font-family: "Open Sans",sans-serif, serif;
+        font-weight: 400;
+      }
+    
+      .attribution { font-size: 11px; text-align: center; }
+      .attribution a { color: hsl(228, 45%, 44%); }
+      .first-section, .second-section {
+        margin: 30px;
+      }
+    
+      header {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+        padding-top: 24px;
+      }
+    
+      .header-image{
+        width: 50%;
+      }
+    
+      .header-image img{
+        width: 40%;
+      }
+    
+      .nav-link {
+        display: flex;
+        justify-content: flex-end;
+        width: 50%;
+        margin: 4px;
+        padding: 4px;
+      }
+    
+      .nav-link a{
+        width: 20%;
+        text-decoration: none;
+        padding: 12px;
+        color: #575252;
+      }
+    
+    
+      .second-section {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+      }
+    
+      .second-section-content {
+        width: 50%;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: flex-start;
+      }
+    
+      .second-section-content-2 {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      .second-section-content-2 img{
+        width: 100%;
+      }
+    
+      .second-section-content h1, .third-section-content h1 {
+        font-family: Raleway, sans-serif;
+        font-size: 38px;
+        font-weight: 700;
+      }
+    
+     .input-field input {
+      width: 16em;
+      height: 48px;
+      margin: 8px;
+     }
+    
+     .input-field input::placeholder {
+      padding-left: 20px;
+      font-size: 20px;
+    }
+    
+     .input-field button {
+      width: 12em;
+      height: 50px;
+      background-color: rgb(48, 101, 248);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      margin: 8px;
+      font-size: 20px;
+     }
+    
+     .second-section-content-2{
+        width: 50%;
+      }
+      .second-section-content-2 img{
+        width: 100%;
+      }
+    
+    .third-section {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 100px;
+    background: url("images/bg-curve-mobile.svg");
+    background-repeat:space;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    padding: 100px 50px;
+    } 
+    
+    .third-section-content {
+    width: 40%;
+    }
+    
+    .p1-text, .p2-text{
+      width: 80%;
+      line-height: 24px;
+    }
+    
+    .polos {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    }
+    
+    .polos img {
+    width: 80%;
+    }
+    
+    
+    .fylo{
+    background-color:white;
+    color: #5b5858;
+    padding: 24px;
+    width: 50%;
+    margin: 40px 0px;
+    border-radius: 4px;
+    line-height: 30px;
+    border: rgba(117, 103, 103, 0.1) solid 2px;
+    }
+    
+    .polo {
+   display: flex; 
+   align-items: flex-start;
+   justify-content: flex-start;
+   font-size: 16px;
+}
+
+.inner-div h3, .inner-div h4 {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+.inner-div h3 {
+    color: #031036;
+}
+
+.inner-div h4 {
+    font-size: 8px;
+    color: #464d61;
+}
+    
+    .polo img {
+    width: 15%;
+    border-radius: 50px;
+    margin: 20px 12px;
+    }
+    
+   
+    
+    .working-link{
+    display: flex;
+    }
+    
+    .working-link a {
+    color: hsl(170, 45%, 43%);
+    text-decoration: none;
+    }
+    
+    .fourth-section {
+    display: flex;
+    flex-flow: row;
+    background-color: hsl(233, 26%, 52%);
+    }
+    
+    .fourth-section-content {
+    width: 50%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    padding: 30px;
+    }
+    
+    .p3-text{
+      width: 60%;
+      line-height: 24px;
+    }
+    
+    .fourth-section-content2 {
+    width: 50%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: flex-start;
+    }
+    
+    .fourth-section-content2 input {
+    width: 60%;
+    height: 40px;
+    border-radius: 2px;
+    border: none;
+    margin: 4px;
+    margin-bottom: 8px;
+    }
+    
+    .fourth-section-content2 button {
+    width: 20%;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    margin: 4px;
+    color: white;
+    background-color: rgb(48, 101, 248);
+    }
+    
+    footer {
+    background-color: hsl(240, 76%, 18%);
+    padding: 80px; 
+    }
+    
+    .footer-logo  {
+    padding: 20px 0px;
+    color: white;
+    }
+    
+    .footer {
+      color: white;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+    
+    
+    .footer-div, .footer-div2, .footer-div3 {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 16px;
+    }
+    
+    .phone img, .email img{
+    padding-right: 20px;
+    }
+    
+    /* Style all font awesome icons */
+    .fa {
+    font-size: 16px;
+    padding: 4px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    }
+    
+    /* Add a hover effect if you want */
+    .fa:hover {
+    opacity: 0.7;
+    }
+    
+    /* Facebook & Twitter */
+    .fa-facebook, .fa-twitter, .fa-instagram {
+    border: white solid 0.5px;
+    color: white;
+    border-radius: 20px;
+    }
+    
+    .footer-div4 {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 16px;
+    }
+    
+    /*  */
+    
+    @media screen and (max-width: 600px) {
+    
+    /* .input-field input {
+      width: 16em;
+      height: 32px;
+     }
+    
+     .input-field button {
+      width: 12em;
+      height: 32px;
+      background-color: rgb(48, 101, 248);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      margin-left: 8px;
+     } */
+    
+      .nav-link {
+        width: 70%;
+      }
+      .second-section{
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+    
+      .second-section-content {
+        box-sizing: border-box;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        order: 2;
+      }
+    
+      .second-section-content p {
+        width: 70%;
+        word-spacing: 2px;
+        font-size: 20px;
+        color: #414040;
+      }
+      
+      .second-section-content h1 {
+        width: 90%;
+      }
+    
+      .second-section-content-2 {
+        width: 100%;
+       order: 1;
+      }
+      .second-section-content-2 img{
+        width: 80%;
+      }
+    
+      .input-field {
+      width: 100%;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+     }
+      .input-field input {
+      width: 80%;
+      
+     }
+    
+     .input-field button {
+      width: 80%;
+     }
+    
+     .third-section {
+      width: 100%;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+     }
+    
+     .third-section-content {
+      order: 2;
+      width: 100%;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+     }
+    
+     .third-section-content h1 {
+        font-size: 18px;
+     }
+     
+    .p1-text, .p2-text {
+        font-size: 18px;
+        word-spacing: 3px;
+        line-height: 30px;
+        color: #676363;
+        width: 85%;
+     }
+    
+    .polos {
+      order: 1;
+      width: 100%;
+      margin-bottom: 70px;
+    }
+    
+    .fylo {
+      width: 70%;
+    }
+    
+    .fourth-section{
+      display: flex;
+      flex-flow: column wrap;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .fourth-section-content {
+      width: 100%;
+      align-items: center;
+    }
+    
+    .p3-text{
+      width: 55%;
+      line-height: 24px;
+      text-align: center;
+      word-spacing: 3px;
+    }
+    
+    .fourth-section-content2 {
+      width: 100%;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      }
+    
+      .fourth-section-content2 input {
+        width: 50%;
+        }
+    
+        .fourth-section-content2 button {
+          width: 50%;
+          border: none;
+          margin-bottom: 80px;
+          }
+    
+          .footer {
+            display: flex;
+            flex-flow: column wrap;
+            font-size: 24px;
+          }
+    
+    
+      .footer-div, .footer-div2, .footer-div3 {
+       margin: 20px;
+        }
+    
+    
+        .footer-div4 {
+          justify-content: center;
+          align-items: center;
+          margin: 40px;
+          }
+    
+    }
+   </style>
+  </head>
+  <body>
+    <main>
+      <section class="first-section">
+        <header>
+          <div class="header-image">
+            <img src="./images/logo.svg" />
+          </div>
+          <div class="nav-link">
+            <a href="#">Features</a>
+            <a href="#">Team</a>
+            <a href="#">Sign In</a>
+          </div>
+        </header>
+      </section>
+      <section class="second-section">
+        <div class="second-section-content">
+          <h1>All your files in one secure location, accessible anywhere.</h1>
+          <p>
+            Fylo stores your most important files in one secure location. Access
+            them wherever you need, share and collaborate with friends, family,
+            and co-workers.
+          </p>
+          <div class="input-field">
+            <input type="email" placeholder="Enter your email..." />
+            <button>Get Started</button>
+          </div>
+        </div>
+        <div class="second-section-content-2">
+          <img src="./images/illustration-1.svg" alt="Picture is missing" />
+        </div>
+      </section>
+
+      <section class="third-section">
+        <div class="third-section-content">
+          <h1>Stay productive, wherever you are</h1>
+          <p class="p1-text">
+            Never let location be an issue when accessing your files. Fylo has
+            you covered for all of your file storage needs.
+          </p>
+          <p class="p2-text">
+            Securely share files and folders with friends, family and colleagues
+            for live collaboration. No email attachments required!
+          </p>
+
+          <span class="working-link">
+            <a href="#"
+              >See how Fylo works <img src="./images/icon-arrow.svg" />
+              <hr
+            /></a>
+          </span>
+
+          <div class="fylo">
+            <img src="./images/icon-quotes.svg" alt="quotes" />
+            <p>
+              Fylo has improved our team productivity by an order of magnitude.
+              Since making the switch our team has become a well-oiled
+              collaboration machine.
+            </p>
+
+            <div class="polo">
+              <img src="./images/avatar-testimonial.jpg" alt="" />
+              <div class="inner-div">
+                <p class="kyle-name"><h3>Kyle Burton</h3>
+                <h4>Founder & CEO, Huddle</h4></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="polos">
+          <img src="./images/illustration-2.svg" alt="" />
+        </div>
+      </section>
+      <section class="fourth-section">
+        <div class="fourth-section-content">
+          <h1>Get early access today</h1>
+          <p class="p3-text">
+            It only takes a minute to sign up and our free starter tier is
+            extremely generous. If you have any questions, our support team
+            would be happy to help you.
+          </p>
+        </div>
+        <div class="fourth-section-content2">
+          <input type="email" placeholder="email@example.com" />
+          <button>Get Started For Free</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-logo">
+        <img src="./images/logo.svg" />
+      </div>
+
+      <div class="footer">
+        <div class="footer-div">
+          <div class="phone">
+            <p><img src="./images/icon-phone.svg" />Phone: +1-543-123-4567</p>
+            <p><img src="./images/icon-email.svg" />example@fylo.com</p>
+          </div>
+        </div>
+        <div class="footer-div2">
+          <a href="#">About Us</a>
+          <a href="#">Jobs</a>
+          <a href="#">Press</a>
+          <a href="#">Blog</a>
+        </div>
+        <div class="footer-div3">
+          <a href="#"> Contact Us</a>
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+        </div>
+        <div class="footer-div4">
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-instagram"></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
